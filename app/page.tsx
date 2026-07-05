@@ -6,7 +6,7 @@ export default function Home() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 bg-[#0c0c0c]">
         <img 
-          src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071&auto=format&fit=crop"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD22nqPhUesXiH0WAO7qyQ1S9kYiwz6C2kr2I5IV--bw&s=10"
           alt="Latar Belakang Biji Kopi"
           className="w-full h-full object-cover opacity-40 mix-blend-overlay"
         />
