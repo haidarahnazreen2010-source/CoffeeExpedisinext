@@ -4,15 +4,12 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-[#0c0c0c] text-white font-sans overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0 bg-[#0c0c0c]">
-        <img 
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD22nqPhUesXiH0WAO7qyQ1S9kYiwz6C2kr2I5IV--bw&s=10"
-          alt="Latar Belakang Biji Kopi"
-          className="w-full h-full object-cover opacity-40 mix-blend-overlay"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0c] via-transparent to-transparent opacity-90"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0c0c0c] via-[#0c0c0c]/80 to-transparent"></div>
-      </div>
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-50"
+        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=761&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')` }}
+      ></div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#0c0c0c] via-transparent to-transparent opacity-90 pointer-events-none"></div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#0c0c0c] via-[#0c0c0c]/80 to-transparent pointer-events-none"></div>
 
       {/* Navigation */}
       <nav className="relative z-10 flex items-center justify-between px-8 py-6 md:px-16 lg:px-24">
