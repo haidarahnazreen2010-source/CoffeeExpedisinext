@@ -20,7 +20,7 @@ export default function Home() {
           Senja <span className="text-[#C19A6B]">Kopi</span>
         </div>
         <div className="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-          <Link href="#" className="hover:text-[#C19A6B] transition-colors">Cerita Kami</Link>
+          <Link href="#" className="hover:text-[#C19A6B] transition-colors">Cerita Coffee</Link>
           <Link href="#" className="hover:text-[#C19A6B] transition-colors">Menu</Link>
           <Link href="#" className="hover:text-[#C19A6B] transition-colors">Toko</Link>
           <Link href="#" className="hover:text-[#C19A6B] transition-colors">Kontak</Link>
