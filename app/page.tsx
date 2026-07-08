@@ -16,17 +16,25 @@ export default function Home() {
       <nav className="relative z-20 w-full h-20 md:h-24 border-b border-white/5 bg-[#1A0F0A]/60 backdrop-blur-md">
         {/* Adjusted padding: symmetrical and professional */}
         <div className="w-full h-full flex items-center justify-between px-8 md:px-16 lg:px-24">
-          {/* Left: Logo (Tasteful modern overhang) */}
+          {/* Left: Logo & Brand Name (Tasteful modern overhang) */}
           <div className="w-1/3 flex justify-start items-center relative h-full">
-            <Link href="/" className="absolute top-1/2 -translate-y-1/2 transition-transform hover:scale-105 duration-300 z-30">
+            <Link href="/" className="absolute top-1/2 -translate-y-1/2 group transition-transform hover:scale-105 duration-300 z-30 flex items-center gap-1">
               <Image 
                 src="/logo1.png" 
                 alt="Coffee Expedisi Logo" 
-                width={120} 
-                height={120} 
-                className="object-contain drop-shadow-2xl"
+                width={100} 
+                height={100} 
+                className="object-contain drop-shadow-2xl transition-transform duration-500 group-hover:rotate-[-5deg]"
                 priority
               />
+              <div className="hidden lg:flex flex-col justify-center pt-1 -ml-1">
+                <span className="text-2xl font-black tracking-widest text-white uppercase leading-none drop-shadow-lg">
+                  Coffee
+                </span>
+                <span className="text-sm font-bold tracking-[0.35em] text-[#E77D13] uppercase mt-1.5 drop-shadow-md pl-1">
+                  Expedisi
+                </span>
+              </div>
             </Link>
           </div>
 
