@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "About Us - Coffee Expedisi",
+  title: "About - Coffee Expedisi",
   description: "Learn more about our coffee and story.",
 };
 
