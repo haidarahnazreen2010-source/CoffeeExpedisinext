@@ -20,7 +20,7 @@ export default function AboutPage() {
             Our <span className="text-[#E77D13]">Story</span>
           </h1>
           <p className="text-lg md:text-xl text-[#FDF5E6]/90 leading-relaxed font-light">
-            Born from a passion for the perfect brew, Coffee Expedisi is on a mission to bring the world's finest, ethically sourced beans straight to your cup. Every sip is a journey.
+            Born a passion for the perfect brew, Coffee Expedisi is on a mission to bring the world's finest, ethically sourced beans straight to your cup. Every sip is a journey.
           </p>
         </div>
       </section>
