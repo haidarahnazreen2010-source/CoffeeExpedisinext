@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
@@ -7,11 +5,11 @@ export default function Home() {
     <div className="relative min-h-screen bg-[#1A0F0A] text-[#FDF5E6] font-sans overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-40"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-[0.45]"
         style={{ backgroundImage: `url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=761&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')` }}
       ></div>
-      <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#1A0F0A] via-transparent to-transparent opacity-90 pointer-events-none"></div>
-      <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#1A0F0A] via-[#1A0F0A]/80 to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#1A0F0A] via-[#1A0F0A]/30 to-transparent opacity-70 pointer-events-none"></div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#1A0F0A] via-[#1A0F0A]/70 to-transparent pointer-events-none"></div>
 
       {/* Navigation */}
       <Navbar />
