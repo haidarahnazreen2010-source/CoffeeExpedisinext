@@ -9,7 +9,7 @@ const products = [
     id: 101,
     name: "Iced Americano",
     description: "Kopi hitam dingin yang menyegarkan, diseduh sempurna.",
-    price: 25000,
+    price: 25300,
     image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=600&auto=format&fit=crop"
   },
   {
