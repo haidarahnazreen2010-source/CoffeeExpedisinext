@@ -4,53 +4,12 @@ import Navbar from "@/components/Navbar";
 import { useCart } from "@/context/CartContext";
 import { formatIDR } from "@/utils/formatCurrency";
 
-const products = [
-  {
-    id: 1,
-    name: "Espresso Roast",
-    description: "Kaya, berani, dan sempurna untuk memulai hari Anda.",
-    price: 45000,
-    image: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    id: 2,
-    name: "Colombian Blend",
-    description: "Halus dan seimbang dengan sentuhan cokelat dan kacang.",
-    price: 55000,
-    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    id: 3,
-    name: "Ethiopian Yirgacheffe",
-    description: "Ringan dan floral dengan sentuhan sitrus yang cerah.",
-    price: 65000,
-    image: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    id: 4,
-    name: "Decaf House Blend",
-    description: "Penuh rasa, tanpa membuat Anda gelisah.",
-    price: 50000,
-    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    id: 5,
-    name: "French Roast",
-    description: "Kuat, dengan aroma smokey yang sangat kaya rasa.",
-    price: 48000,
-    image: "https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    id: 6,
-    name: "Cold Brew Pack",
-    description: "Digiling khusus untuk racikan cold brew yang menyegarkan.",
-    price: 75000,
-    image: "https://images.unsplash.com/photo-1517701550927-30cf0baabcfa?q=80&w=600&auto=format&fit=crop"
-  }
-];
+import { products as allProducts } from "@/data/products";
+import Link from "next/link";
 
 export default function BeansShop() {
   const { addToCart } = useCart();
+  const products = allProducts.filter(p => p.category === 'beans');
 
   return (
     <div className="min-h-screen bg-[#1A0F0A] text-[#FDF5E6] font-sans">
@@ -102,12 +61,12 @@ export default function BeansShop() {
                 <p className="text-white/60 text-sm leading-relaxed mb-6 flex-1">
                   {product.description}
                 </p>
-                <button 
-                  onClick={() => addToCart({ id: product.id, name: product.name, price: product.price, image: product.image })}
-                  className="w-full py-3 px-4 border border-[#E77D13]/50 text-[#E77D13] rounded-xl font-bold tracking-wider uppercase text-sm hover:bg-[#E77D13] hover:text-white transition-all duration-300"
+                <Link 
+                  href={`/product/${product.id}`}
+                  className="w-full py-3 px-4 border border-[#E77D13]/50 text-[#E77D13] rounded-xl font-bold tracking-wider uppercase text-sm hover:bg-[#E77D13] hover:text-white transition-all duration-300 text-center block"
                 >
-                  Tambah ke Keranjang
-                </button>
+                  Detail Produk
+                </Link>
               </div>
             </div>
           ))}

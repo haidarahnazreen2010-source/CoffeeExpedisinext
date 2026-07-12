@@ -35,7 +35,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
       }
       return [...prev, { ...item, quantity: 1 }];
     });
-    setIsCartOpen(true);
   };
 
   const removeFromCart = (id: number) => {

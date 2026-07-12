@@ -4,53 +4,12 @@ import Navbar from "@/components/Navbar";
 import { useCart } from "@/context/CartContext";
 import { formatIDR } from "@/utils/formatCurrency";
 
-const products = [
-  {
-    id: 101,
-    name: "Iced Americano",
-    description: "Kopi hitam dingin yang menyegarkan, diseduh sempurna.",
-    price: 25000,
-    image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    id: 102,
-    name: "Caffe Latte",
-    description: "Espresso dengan susu hangat dan busa lembut di atasnya.",
-    price: 30000,
-    image: "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    id: 103,
-    name: "Cappuccino",
-    description: "Rasa espresso yang kuat dipadukan dengan busa susu tebal.",
-    price: 30000,
-    image: "https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    id: 104,
-    name: "Caramel Macchiato",
-    description: "Susu vanilla manis dengan siraman espresso dan saus karamel.",
-    price: 35000,
-    image: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    id: 105,
-    name: "Matcha Espresso",
-    description: "Perpaduan unik antara matcha Jepang premium dan espresso.",
-    price: 38000,
-    image: "https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    id: 106,
-    name: "Mochaccino",
-    description: "Kopi, susu, dan cokelat manis yang memanjakan lidah Anda.",
-    price: 35000,
-    image: "https://images.unsplash.com/photo-1572119865084-43c285814d63?q=80&w=600&auto=format&fit=crop"
-  }
-];
+import { products as allProducts } from "@/data/products";
+import Link from "next/link";
 
 export default function DrinksShop() {
   const { addToCart } = useCart();
+  const products = allProducts.filter(p => p.category === 'drinks');
 
   return (
     <div className="min-h-screen bg-[#1A0F0A] text-[#FDF5E6] font-sans">
@@ -102,12 +61,12 @@ export default function DrinksShop() {
                 <p className="text-white/60 text-sm leading-relaxed mb-6 flex-1">
                   {product.description}
                 </p>
-                <button 
-                  onClick={() => addToCart({ id: product.id, name: product.name, price: product.price, image: product.image })}
-                  className="w-full py-3 px-4 border border-[#E77D13]/50 text-[#E77D13] rounded-xl font-bold tracking-wider uppercase text-sm hover:bg-[#E77D13] hover:text-white transition-all duration-300"
+                <Link 
+                  href={`/product/${product.id}`}
+                  className="w-full py-3 px-4 border border-[#E77D13]/50 text-[#E77D13] rounded-xl font-bold tracking-wider uppercase text-sm hover:bg-[#E77D13] hover:text-white transition-all duration-300 text-center block"
                 >
-                  Tambah ke Keranjang
-                </button>
+                  Detail Produk
+                </Link>
               </div>
             </div>
           ))}

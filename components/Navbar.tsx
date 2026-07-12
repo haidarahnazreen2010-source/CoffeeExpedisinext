@@ -39,7 +39,7 @@ export default function Navbar() {
           </div>
 
           {/* Center: Main Links */}
-          <div className="w-1/3 hidden md:flex justify-center h-full gap-12 lg:gap-20 text-base lg:text-lg font-bold tracking-widest items-center uppercase">
+          <div className="w-1/3 hidden lg:flex justify-center h-full gap-6 xl:gap-10 text-xs xl:text-sm font-bold tracking-widest items-center uppercase">
             <Link href="/" className="relative group h-full flex items-center">
               <span className={`transition-colors ${pathname === '/' ? 'text-[#E77D13]' : 'hover:text-[#E77D13]'}`}>Home</span>
               <span className={`absolute bottom-[28%] left-0 h-[2px] bg-[#E77D13] transition-all duration-300 ${pathname === '/' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
@@ -53,18 +53,26 @@ export default function Navbar() {
               {/* Dropdown Menu */}
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                 <div className="bg-[#1A0F0A]/95 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl py-2 w-48 flex flex-col">
-                  <Link href="/shop/beans" className="px-6 py-3 text-sm text-white hover:text-[#E77D13] hover:bg-white/5 transition-colors">
+                  <Link href="/shop/beans" className="px-6 py-3 text-sm text-white hover:text-[#E77D13] hover:bg-white/5 transition-colors normal-case">
                     Biji Kopi
                   </Link>
-                  <Link href="/shop/drinks" className="px-6 py-3 text-sm text-white hover:text-[#E77D13] hover:bg-white/5 transition-colors">
+                  <Link href="/shop/drinks" className="px-6 py-3 text-sm text-white hover:text-[#E77D13] hover:bg-white/5 transition-colors normal-case">
                     Minuman Kopi
                   </Link>
                 </div>
               </div>
             </div>
-            <Link href="/about" className="relative group h-full flex items-center">
-              <span className={`transition-colors ${pathname === '/about' ? 'text-[#E77D13]' : 'hover:text-[#E77D13]'}`}>About</span>
-              <span className={`absolute bottom-[28%] left-0 h-[2px] bg-[#E77D13] transition-all duration-300 ${pathname === '/about' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+            <Link href="/#about" className="relative group h-full flex items-center">
+              <span className="transition-colors hover:text-[#E77D13]">About</span>
+              <span className="absolute bottom-[28%] left-0 h-[2px] bg-[#E77D13] transition-all duration-300 w-0 group-hover:w-full"></span>
+            </Link>
+            <Link href="/#testimoni" className="relative group h-full flex items-center">
+              <span className="transition-colors hover:text-[#E77D13]">Testimoni</span>
+              <span className="absolute bottom-[28%] left-0 h-[2px] bg-[#E77D13] transition-all duration-300 w-0 group-hover:w-full"></span>
+            </Link>
+            <Link href="/galeri" className="relative group h-full flex items-center">
+              <span className={`transition-colors ${pathname === '/galeri' ? 'text-[#E77D13]' : 'hover:text-[#E77D13]'}`}>Galeri</span>
+              <span className={`absolute bottom-[28%] left-0 h-[2px] bg-[#E77D13] transition-all duration-300 ${pathname === '/galeri' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </Link>
           </div>
 
